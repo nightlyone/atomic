@@ -1,0 +1,5 @@
+language: go
+# Only test commits to master branch and all pull requests
+branches:
+  only:
+    - master
