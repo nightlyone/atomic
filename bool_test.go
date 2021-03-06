@@ -6,7 +6,7 @@ import (
 	"github.com/nightlyone/atomic"
 )
 
-// Service is a flaky service
+// Service is a flaky service.
 type Service struct {
 	health atomic.Bool
 }
