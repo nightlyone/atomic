@@ -1,7 +1,7 @@
 # atomic
 Atomic operations as methods on types
 
-[![GoDoc](https://godoc.org/github.com/nightlyone/atomic?status.svg)](https://godoc.org/github.com/nightlyone/atomic)
+[![Go Reference](https://pkg.go.dev/badge/github.com/nightlyone/atomic.svg)](https://pkg.go.dev/github.com/nightlyone/atomic)
 [![Build Status](https://secure.travis-ci.org/nightlyone/atomic.png)](https://travis-ci.org/nightlyone/atomic)
 
 # example usage

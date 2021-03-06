@@ -12,7 +12,7 @@ type Bool struct {
 
 // NewBool returns a new atomic boolean set inititially to value.
 func NewBool(value bool) *Bool {
-	if value == true {
+	if value {
 		return &Bool{i: 1}
 	}
 	return &Bool{}
@@ -37,9 +37,9 @@ func (b *Bool) CompareAndSwap(old, new bool) (swapped bool) {
 	ref := &b.i
 
 	switch {
-	case old == false && new == true:
+	case !old && new:
 		return atomic.CompareAndSwapUint64(ref, 0, 1)
-	case old == true && new == false:
+	case old && !new:
 		return atomic.CompareAndSwapUint64(ref, 1, 0)
 	default:
 		// this case is nonsense, since a swap will never happen.
